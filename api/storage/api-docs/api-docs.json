@@ -1,0 +1,68 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Hackathoneros API",
+        "description": "Bienvenido a la API de Hackathoneros, con ella puedes obtener acceso a diferentes datos de la plataforma",
+        "termsOfService": "",
+        "contact": {
+            "email": "marco.ramirez@rzerocorp.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "URL to the license"
+        },
+        "version": "1.0.0"
+    },
+    "host": "localhost:8000",
+    "basePath": "/",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "Inicio de Sesi\u00f3n"
+                ],
+                "summary": "Inicio de Sesi\u00f3n a Hackathoneros",
+                "description": "Inicia sesi\u00f3n a la plataforma. No discrimina entre roles de usuarios.",
+                "operationId": "Autenticaci\u00f3n y Registro",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "Correo Electr\u00f3nico",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "description": "Contrase\u00f1a",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operaci\u00f3n satisfactoria. Entrega token JWT"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key_security_example": []
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {},
+    "externalDocs": {
+        "description": "Find out more about our website",
+        "url": "https://programming4food.io"
+    }
+}
