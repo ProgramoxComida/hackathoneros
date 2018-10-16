@@ -1,19 +1,17 @@
 import * as React from 'react';
-import './App.css';
+import Navbar from './components/shared/Navbar';
+import Sidebar from './components/shared/Sidebar';
 
-import logo from './logo.svg';
+import "node_modules/@coreui/coreui/dist/css/coreui.min.css"
+import "node_modules/simple-line-icons/css/simple-line-icons.css"
+import "node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Navbar/>
+        <Sidebar/>
       </div>
     );
   }
